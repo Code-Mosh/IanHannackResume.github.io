@@ -72,27 +72,13 @@
 						<dialog class="project-dialog" id="python-projects-dialog" aria-labelledby="python-projects-title">
 							<div class="project-dialog__panel">
 								<button class="project-dialog__close" type="button" aria-label="Close Python projects">&times;</button>
-								<div class="project-dialog__menu">
-									<h3 id="python-projects-title">Python Projects</h3>
-									<p>Select a project to open its details or source.</p>
-									<ul class="project-list">
-										<li><button class="project-choice" type="button" data-project-detail="selenium-project">Selenium Booking Bot</button><span>Browser automation with Selenium and Chrome.</span></li>
-										<li><button class="project-choice" type="button" data-project-detail="snake-project">Python Snake Game</button><span>A simple Snake game built with Python.</span></li>
-										<li><a href="https://github.com/Code-Mosh/gmail-marketing-manager" target="_blank" rel="noopener noreferrer">Gmail Unsubscriber Tool</a><span>Local Gmail app; the source repository is private.</span></li>
-									</ul>
-								</div>
-								<article class="project-detail" id="selenium-project" hidden>
-									<button class="project-detail__back" type="button">← Back to Python Projects</button>
-									<h3>Selenium Booking Bot</h3>
-									<p>A browser automation project that books trips from Booking.com using Selenium and Chrome.</p>
-									<!-- Add a project image when ready: <img src="images/projects/selenium-booking-bot.jpg" alt="Selenium Booking Bot" /> -->
-								</article>
-								<article class="project-detail" id="snake-project" hidden>
-									<button class="project-detail__back" type="button">← Back to Python Projects</button>
-									<h3>Python Snake Game</h3>
-									<p>A simple Snake game built with Python.</p>
-									<!-- Add a project image when ready: <img src="images/projects/python-snake.jpg" alt="Python Snake game" /> -->
-								</article>
+								<h3 id="python-projects-title">Python Projects</h3>
+								<p>Select a project with an available destination to open it.</p>
+								<ul class="project-list">
+									<li><span class="project-list__title">Selenium Booking Bot</span><span>In Development — project link coming soon.</span></li>
+									<li><span class="project-list__title">Python Snake Game</span><span>In Development — project link coming soon.</span></li>
+									<li><a href="https://github.com/Code-Mosh/gmail-marketing-manager" target="_blank" rel="noopener noreferrer">Gmail Unsubscriber Tool</a><span>Local Gmail app; the source repository is private.</span></li>
+								</ul>
 							</div>
 						</dialog>
 
@@ -212,10 +198,7 @@
 			.project-list { list-style: none; margin: 1.5em 0 0; padding: 0; }
 			.project-list li { border-top: 1px solid #e5e5e5; padding: 1em 0; }
 			.project-list a, .project-choice { color: #319b7e; font-size: 1.1em; font-weight: 600; }
-			.project-list a:hover, .project-choice:hover { color: #167a60; }
 			.project-list li span { display: block; margin-top: 0.35em; }
-			.project-choice { background: none; border: 0; cursor: pointer; font-family: inherit; padding: 0; text-align: left; }
-			.project-detail__back { background: none; border: 0; color: #319b7e; cursor: pointer; font: inherit; margin-bottom: 1.5em; padding: 0; }
 			.project-certificates { border-top: 1px solid rgba(144,144,144,0.35); margin-top: 3em; padding-top: 2em; }
 			.project-certificates h3 { color: #787878; font-size: 1.1em; margin-bottom: 1em; }
 			.project-certificates ul { list-style: disc; margin-left: 1.5em; }
