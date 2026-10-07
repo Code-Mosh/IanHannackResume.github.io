@@ -8,6 +8,34 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+<style>
+			.project-category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em; margin-top: 2em; }
+			.project-category { align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.18); border-radius: 0.35em; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; min-height: 13em; padding: 2em; text-align: left; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; width: 100%; }
+			.project-category:hover, .project-category:focus-visible { background: rgba(255,255,255,0.1); border-color: #49bf9d; transform: translateY(-2px); }
+			.project-category strong { color: #787878; font-size: 1.35em; font-weight: 400; margin-bottom: 0.75em; }
+			.project-category__action { color: #49bf9d; margin-top: auto; padding-top: 1.5em; }
+			.project-dialog { background: #fff; border: 0; border-radius: 0.4em; color: #787878; max-height: min(82vh, 48em); max-width: 44em; overflow: auto; padding: 0; width: calc(100% - 2em); }
+			.project-dialog::backdrop { background: rgba(20, 22, 25, 0.82); }
+			.project-dialog__panel { padding: 2.5em; position: relative; }
+			.project-dialog__panel h3 { color: #555; margin: 0 2em 0.5em 0; }
+			.project-dialog__close { background: transparent; border: 0; color: #777; cursor: pointer; font-size: 2em; line-height: 1; padding: 0.15em 0.35em; position: absolute; right: 0.4em; top: 0.35em; }
+			.project-list { list-style: none; margin: 1.5em 0 0; padding: 0; }
+			.project-list li { border-top: 1px solid #e5e5e5; padding: 1em 0; }
+			.project-list a { color: #319b7e; font-size: 1.1em; font-weight: 600; }
+			.project-list li span { display: block; margin-top: 0.35em; }
+			.project-certificates { border-top: 1px solid rgba(144,144,144,0.35); margin-top: 3em; padding-top: 2em; }
+			.project-certificates h3 { color: #787878; font-size: 1.1em; margin-bottom: 1em; }
+			.project-certificates ul { list-style: disc; margin-left: 1.5em; }
+			.project-certificates li { margin: 0.5em 0; }
+			.project-list__title { color: #555; display: inline-block; font-size: 1.1em; font-weight: 600; }
+			.project-list__title + span { margin-top: 0.35em; }
+
+			@media screen and (max-width: 736px) {
+				.project-category-grid { grid-template-columns: 1fr; gap: 1em; }
+				.project-category { min-height: 10em; padding: 1.5em; }
+				.project-dialog__panel { padding: 2em 1.5em; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -37,63 +65,58 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/websitesnipimg.PNG" class="image fit thumb"><img src="images/thumbs/websitesnipimg (7).png" alt="" /></a>
-								<h3>My Website</h3>
-								<p>A little bit about myself.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3><a href="https://www.thehearthstonehouse.org/" target="_blank" rel="noopener noreferrer">The Hearthstone House</a></h3>
-								<p>Website for a Washington organization supporting foster youth through a stable, nurturing home and community programs.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3><a href="https://thehearthstonehouse.wixsite.com/horizondrift" target="_blank" rel="noopener noreferrer">horizondrift.com</a></h3>
-								<p>Horizon Drift website.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3><a href="https://github.com/Code-Mosh/gmail-marketing-manager" target="_blank" rel="noopener noreferrer">Gmail Unsubscriber Tool</a></h3>
-								<p>A local Gmail app that reviews senders with List-Unsubscribe headers, supports one-click unsubscribe where available, and moves selected senders’ messages to Trash after confirmation.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Selenium</h3>
-								<p>A booking bot that will book trips from booking.com using a google chrome browser.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Python</h3>
-								<p>A simple snake game.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>HTML & CSS</h3>
-								<p>Front end design</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Certificates and Achievement</h3>
-							<ul>
-								<li>
-								<p><a href="https://www.freecodecamp.org/certification/Mooshi/responsive-web-design "target="_blank">Responsive Web Design</p>
-								<p><a href="https://www.freecodecamp.org/certification/Mooshi/scientific-computing-with-python-v7"target="_blank">Scientific Computing With Python</a></p>
-								</li>
-							</ul>
-							</article>
-							<!--<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>-->
+					<section id="two" class="project-hub">
+						<h2>Explore My Projects</h2>
+						<p>Choose a category to explore the projects.</p>
+						<div class="project-category-grid">
+							<button class="project-category" type="button" data-project-dialog="web-development-dialog">
+								<!-- Add an image when ready: <img class="project-category__image" src="images/projects/web-development.jpg" alt="Web development projects" /> -->
+								<strong>Web Development</strong>
+								<span>Websites, front-end design, and portfolio work</span>
+								<span class="project-category__action">Choose a project <span aria-hidden="true">→</span></span>
+							</button>
+							<button class="project-category" type="button" data-project-dialog="python-projects-dialog">
+								<!-- Add an image when ready: <img class="project-category__image" src="images/projects/python-projects.jpg" alt="Python projects" /> -->
+								<strong>Python Projects</strong>
+								<span>Automation tools and games built with Python</span>
+								<span class="project-category__action">Choose a project <span aria-hidden="true">→</span></span>
+							</button>
 						</div>
-						<!--<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul> -->
+
+						<dialog class="project-dialog" id="web-development-dialog" aria-labelledby="web-development-title">
+							<div class="project-dialog__panel">
+								<button class="project-dialog__close" type="button" aria-label="Close Web Development projects">&times;</button>
+								<h3 id="web-development-title">Web Development</h3>
+								<p>Select a project to open it.</p>
+								<ul class="project-list">
+									<li><a href="https://www.thehearthstonehouse.org/" target="_blank" rel="noopener noreferrer">The Hearthstone House</a><span>Website for a Washington organization supporting foster youth.</span></li>
+									<li><a href="https://thehearthstonehouse.wixsite.com/horizondrift" target="_blank" rel="noopener noreferrer">horizondrift.com</a><span>Horizon Drift website.</span></li>
+									<li><a href="https://code-mosh.github.io/IanHannackResume.github.io/" target="_blank" rel="noopener noreferrer">Personal Resume Website</a><span>This portfolio website.</span></li>
+									<li><a href="https://github.com/Code-Mosh/IanHannackResume.github.io" target="_blank" rel="noopener noreferrer">HTML &amp; CSS Front-End Design</a><span>Source for this portfolio.</span></li>
+								</ul>
+							</div>
+						</dialog>
+
+						<dialog class="project-dialog" id="python-projects-dialog" aria-labelledby="python-projects-title">
+							<div class="project-dialog__panel">
+								<button class="project-dialog__close" type="button" aria-label="Close Python projects">&times;</button>
+								<h3 id="python-projects-title">Python Projects</h3>
+								<p>Select a project with an available destination to open it.</p>
+								<ul class="project-list">
+									<li><span class="project-list__title">Selenium Booking Bot</span><span>In Development — project link coming soon.</span></li>
+									<li><span class="project-list__title">Python Snake Game</span><span>In Development — project link coming soon.</span></li>
+									<li><a href="https://github.com/Code-Mosh/gmail-marketing-manager" target="_blank" rel="noopener noreferrer">Gmail Unsubscriber Tool</a><span>Local Gmail app; the source repository is private.</span></li>
+								</ul>
+							</div>
+						</dialog>
+
+						<section class="project-certificates" aria-labelledby="certificates-title">
+							<h3 id="certificates-title">Certificates and Achievements</h3>
+							<ul>
+								<li><a href="https://www.freecodecamp.org/certification/Mooshi/responsive-web-design" target="_blank" rel="noopener noreferrer">Responsive Web Design</a></li>
+								<li><a href="https://www.freecodecamp.org/certification/Mooshi/scientific-computing-with-python-v7" target="_blank" rel="noopener noreferrer">Scientific Computing With Python</a></li>
+							</ul>
+						</section>
 					</section>
 
 				<!-- Three -->
@@ -150,7 +173,25 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+	
+		<script>
+			(function () {
+				var categoryButtons = document.querySelectorAll("[data-project-dialog]");
+				categoryButtons.forEach(function (button) {
+					button.addEventListener("click", function () {
+						var dialog = document.getElementById(button.getAttribute("data-project-dialog"));
+						if (dialog) dialog.showModal();
+					});
+				});
+				document.querySelectorAll(".project-dialog").forEach(function (dialog) {
+					dialog.querySelector(".project-dialog__close").addEventListener("click", function () { dialog.close(); });
+					dialog.addEventListener("click", function (event) {
+						if (event.target === dialog) dialog.close();
+					});
+				});
+			}());
+		</script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
