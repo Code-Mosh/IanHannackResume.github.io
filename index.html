@@ -8,6 +8,34 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+<style>
+			.project-category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em; margin-top: 2em; }
+			.project-category { align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.18); border-radius: 0.35em; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; min-height: 13em; padding: 2em; text-align: left; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; width: 100%; }
+			.project-category:hover, .project-category:focus-visible { background: rgba(255,255,255,0.1); border-color: #49bf9d; transform: translateY(-2px); }
+			.project-category strong { color: #787878; font-size: 1.35em; font-weight: 400; margin-bottom: 0.75em; }
+			.project-category__action { color: #49bf9d; margin-top: auto; padding-top: 1.5em; }
+			.project-dialog { background: #fff; border: 0; border-radius: 0.4em; color: #787878; max-height: min(82vh, 48em); max-width: 44em; overflow: auto; padding: 0; width: calc(100% - 2em); }
+			.project-dialog::backdrop { background: rgba(20, 22, 25, 0.82); }
+			.project-dialog__panel { padding: 2.5em; position: relative; }
+			.project-dialog__panel h3 { color: #555; margin: 0 2em 0.5em 0; }
+			.project-dialog__close { background: transparent; border: 0; color: #777; cursor: pointer; font-size: 2em; line-height: 1; padding: 0.15em 0.35em; position: absolute; right: 0.4em; top: 0.35em; }
+			.project-list { list-style: none; margin: 1.5em 0 0; padding: 0; }
+			.project-list li { border-top: 1px solid #e5e5e5; padding: 1em 0; }
+			.project-list a { color: #319b7e; font-size: 1.1em; font-weight: 600; }
+			.project-list li span { display: block; margin-top: 0.35em; }
+			.project-certificates { border-top: 1px solid rgba(144,144,144,0.35); margin-top: 3em; padding-top: 2em; }
+			.project-certificates h3 { color: #787878; font-size: 1.1em; margin-bottom: 1em; }
+			.project-certificates ul { list-style: disc; margin-left: 1.5em; }
+			.project-certificates li { margin: 0.5em 0; }
+			.project-list__title { color: #555; display: inline-block; font-size: 1.1em; font-weight: 600; }
+			.project-list__title + span { margin-top: 0.35em; }
+
+			@media screen and (max-width: 736px) {
+				.project-category-grid { grid-template-columns: 1fr; gap: 1em; }
+				.project-category { min-height: 10em; padding: 1.5em; }
+				.project-dialog__panel { padding: 2em 1.5em; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -171,33 +199,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-</html
-		<style>
-			.project-category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em; margin-top: 2em; }
-			.project-category { align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.18); border-radius: 0.35em; color: inherit; cursor: pointer; display: flex; flex-direction: column; font: inherit; min-height: 13em; padding: 2em; text-align: left; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; width: 100%; }
-			.project-category:hover, .project-category:focus-visible { background: rgba(255,255,255,0.1); border-color: #49bf9d; transform: translateY(-2px); }
-			.project-category strong { color: #787878; font-size: 1.35em; font-weight: 400; margin-bottom: 0.75em; }
-			.project-category__action { color: #49bf9d; margin-top: auto; padding-top: 1.5em; }
-			.project-dialog { background: #fff; border: 0; border-radius: 0.4em; color: #787878; max-height: min(82vh, 48em); max-width: 44em; overflow: auto; padding: 0; width: calc(100% - 2em); }
-			.project-dialog::backdrop { background: rgba(20, 22, 25, 0.82); }
-			.project-dialog__panel { padding: 2.5em; position: relative; }
-			.project-dialog__panel h3 { color: #555; margin: 0 2em 0.5em 0; }
-			.project-dialog__close { background: transparent; border: 0; color: #777; cursor: pointer; font-size: 2em; line-height: 1; padding: 0.15em 0.35em; position: absolute; right: 0.4em; top: 0.35em; }
-			.project-list { list-style: none; margin: 1.5em 0 0; padding: 0; }
-			.project-list li { border-top: 1px solid #e5e5e5; padding: 1em 0; }
-			.project-list a { color: #319b7e; font-size: 1.1em; font-weight: 600; }
-			.project-list li span { display: block; margin-top: 0.35em; }
-			.project-certificates { border-top: 1px solid rgba(144,144,144,0.35); margin-top: 3em; padding-top: 2em; }
-			.project-certificates h3 { color: #787878; font-size: 1.1em; margin-bottom: 1em; }
-			.project-certificates ul { list-style: disc; margin-left: 1.5em; }
-			.project-certificates li { margin: 0.5em 0; }
-			.project-list__title { color: #555; display: inline-block; font-size: 1.1em; font-weight: 600; }
-			.project-list__title + span { margin-top: 0.35em; }
-
-			@media screen and (max-width: 736px) {
-				.project-category-grid { grid-template-columns: 1fr; gap: 1em; }
-				.project-category { min-height: 10em; padding: 1.5em; }
-				.project-dialog__panel { padding: 2em 1.5em; }
-			}
-		</style>
->
+</html>
